@@ -17,7 +17,7 @@ jdbc:Client countryDBClient = check initDatabase();
 http:Client flagEndpoint = check new ("https://flagcdn.com");
 
 function initDatabase() returns error|jdbc:Client {
-    jdbc:Client|sql:Error dbClient = new ("jdbc:h2:./data/countriesdb");
+    jdbc:Client|sql:Error dbClient = new ("jdbc:h2:./resources/countriesdb");
 
     if dbClient is jdbc:Client {
 

@@ -7,3 +7,10 @@
   name = "deploymenttestwithrepo"
   org = "sarindasatwso2com"
 
+[[platform.java11.dependency]]
+artifactId = "h2"
+version = "2.1.210"
+groupId = "com.h2database"
+
+[[platform.java11.dependency]]
+path="lib/flags-1.0.jar"
