@@ -182,6 +182,9 @@ dependencies = [
 	{org = "ballerina", name = "lang.value"},
 	{org = "ballerina", name = "observe"}
 ]
+modules = [
+	{org = "ballerina", packageName = "log", moduleName = "log"}
+]
 
 [[package]]
 org = "ballerina"
@@ -191,6 +194,9 @@ dependencies = [
 	{org = "ballerina", name = "io"},
 	{org = "ballerina", name = "jballerina.java"},
 	{org = "ballerina", name = "lang.int"}
+]
+modules = [
+	{org = "ballerina", packageName = "mime", moduleName = "mime"}
 ]
 
 [[package]]
@@ -231,6 +237,20 @@ dependencies = [
 
 [[package]]
 org = "ballerina"
+name = "sql"
+version = "1.3.1"
+dependencies = [
+	{org = "ballerina", name = "io"},
+	{org = "ballerina", name = "jballerina.java"},
+	{org = "ballerina", name = "lang.object"},
+	{org = "ballerina", name = "time"}
+]
+modules = [
+	{org = "ballerina", packageName = "sql", moduleName = "sql"}
+]
+
+[[package]]
+org = "ballerina"
 name = "task"
 version = "2.2.1"
 dependencies = [
@@ -267,12 +287,30 @@ modules = [
 ]
 
 [[package]]
+org = "ballerinax"
+name = "java.jdbc"
+version = "1.3.1"
+dependencies = [
+	{org = "ballerina", name = "io"},
+	{org = "ballerina", name = "jballerina.java"},
+	{org = "ballerina", name = "sql"},
+	{org = "ballerina", name = "time"}
+]
+modules = [
+	{org = "ballerinax", packageName = "java.jdbc", moduleName = "java.jdbc"}
+]
+
+[[package]]
 org = "sarindasatwso2com"
 name = "deploymenttestwithrepo"
 version = "0.1.0"
 dependencies = [
 	{org = "ballerina", name = "http"},
-	{org = "ballerinai", name = "observe"}
+	{org = "ballerina", name = "log"},
+	{org = "ballerina", name = "mime"},
+	{org = "ballerina", name = "sql"},
+	{org = "ballerinai", name = "observe"},
+	{org = "ballerinax", name = "java.jdbc"}
 ]
 modules = [
 	{org = "sarindasatwso2com", packageName = "deploymenttestwithrepo", moduleName = "deploymenttestwithrepo"}
